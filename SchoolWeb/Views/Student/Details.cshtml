@@ -1,0 +1,38 @@
+﻿@model StudentServices.Data.Models.Student
+
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<h2>Student Details</h2>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.roll)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.roll)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.age)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.standard)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.standard)
+        </dd>
+    </dl>
+    <a asp-action="Edit" asp-route-id="@Model.roll" class="btn btn-warning">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
